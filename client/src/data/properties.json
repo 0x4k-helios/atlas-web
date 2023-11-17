@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Cluster Appartement",
+    "address": "Cole Street - San Francisco",
+    "price": "280,000",
+    "image": "./property-01.jpg"
+  },
+  {
+    "name": "Mogador Riad",
+    "address": "Marrakesh - Morocco",
+    "price": "580,000",
+    "image": "./property-02.jpg"
+  },
+  {
+    "name": "Atlas Luxury Villa",
+    "address": "Balian Beach - Indonesia",
+    "price": "1,070,000",
+    "image": "./property-03.jpg"
+  },
+  {
+    "name": "Rosa Villa",
+    "address": "Guardamar del Segura - Spain",
+    "price": "2,195,000",
+    "image": "./property-04.jpg"
+  },
+  {
+    "name": "Spring Houses",
+    "address": "Eldena - Deutschland",
+    "price": "230,000",
+    "image": "./property-05.jpg"
+  },
+  {
+    "name": "Brilliant Residency",
+    "address": "Prague - Czech Republic",
+    "price": "415,000",
+    "image": "./property-06.jpg"
+  }
+]
