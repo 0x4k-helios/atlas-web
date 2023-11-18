@@ -1,7 +1,8 @@
 import React from "react";
 import propertiesData from "../data/properties.json";
-import { FaLocationDot, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
 import SlideButtons from "./ui/SlideButtons";
+import { sliderSettings } from "../data/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -19,15 +20,18 @@ const Properties = () => {
             </h2>
           </div>
         </div>
-        <div className="section-cards ">
-          <Swiper spaceBetween={56} slidesPerView={3}>
+        <div>
+          <span className="lg:w-[1100px] lg:h-[400px] w-[440px] h-[440px] bg-slate-200 rounded-full absolute top-60 left-96  blur-[200px]"></span>
+        </div>
+        <div className="section-cards">
+          <Swiper {...sliderSettings}>
             <div className="absolute -top-[72px] right-0 z-50">
               <SlideButtons />
             </div>
             {propertiesData.map((property, i) => (
               <SwiperSlide
                 key={i}
-                className="group property-card grey-shadow bg-[#fff] rounded-lg hover:bg-orange "
+                className="group property-card bg-[#fff] rounded-lg transition ease-out delay-150 hover:bg-orange"
               >
                 <div className="w-full h-[265px] ">
                   <img
@@ -38,19 +42,19 @@ const Properties = () => {
                 </div>
 
                 <div className="p-6 ">
-                  <p className="text-[32px] text-black group-hover:text-white font-medium leading-none tracking-wide mb-4">
-                    <span className="text-orange group-hover:text-white">
+                  <p className="text-[32px] text-black group-hover:text-white font-medium leading-none tracking-wide mb-4 transition ease-out delay-150">
+                    <span className="text-orange group-hover:text-white transition ease-out delay-150">
                       ${" "}
                     </span>
                     {property.price}
                   </p>
-                  <p className="text-2xl text-black group-hover:text-white font-medium leading-none tracking-wide mb-[10px]">
+                  <p className="text-2xl text-black group-hover:text-white font-medium leading-none tracking-wide mb-[10px] transition ease-out delay-150">
                     {property.name}
                   </p>
-                  <p className="text-sm text-black group-hover:text-white leading-none tracking-wide">
+                  <p className="text-sm text-black group-hover:text-white leading-none tracking-wide transition ease-out delay-150">
                     <FaLocationDot
                       size={12}
-                      className="inline-block text-orange group-hover:text-white"
+                      className="inline-block text-orange group-hover:text-white transition ease-out delay-150"
                     />{" "}
                     {property.address}
                   </p>

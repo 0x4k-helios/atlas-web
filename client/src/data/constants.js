@@ -32,3 +32,24 @@ export const partnersLogos = [
     image: pegipegiLogo,
   },
 ];
+
+//Swiper Slider Settings
+export const sliderSettings = {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 56,
+  breakpoints: {
+    480: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    750: {
+      slidesPerView: 2,
+    },
+    1100: {
+      slidesPerView: 3,
+    },
+  },
+};
