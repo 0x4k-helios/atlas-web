@@ -10,19 +10,20 @@ const Properties = () => {
   return (
     <>
       <div className="mt-40 mb-40 2xl:px-[400px] xl:px-52 lg:px-40 sm:px-24 px-8 flex flex-col gap-8 relative">
-        <div className="section-heading flex justify-between items-end">
+        <div>
+          <span className="lg:w-[1100px] lg:h-[400px] w-[440px] h-[440px] bg-slate-300 rounded-full absolute top-48 left-96  blur-[200px]"></span>
+        </div>
+        <div className="section-heading flex justify-between items-end w-[75%]">
           <div>
             <p className="orange-gradient inline-block text-transparent bg-clip-text text-2xl">
               Explore
             </p>
-            <h2 className="text-5xl text-black leading-none tracking-wide">
+            <h2 className="md:text-5xl text-[32px] text-black leading-none tracking-wide">
               Our Popular Properties
             </h2>
           </div>
         </div>
-        <div>
-          <span className="lg:w-[1100px] lg:h-[400px] w-[440px] h-[440px] bg-slate-200 rounded-full absolute top-60 left-96  blur-[200px]"></span>
-        </div>
+
         <div className="section-cards">
           <Swiper {...sliderSettings}>
             <div className="absolute -top-[72px] right-0 z-50">
