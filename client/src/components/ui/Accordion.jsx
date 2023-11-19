@@ -17,7 +17,7 @@ const Accordion = () => {
           onClick={() => toggleActive(i)}
         >
           <div
-            className={`group-[.is-open]:bg-lightBlue p-4 rounded ${
+            className={`group-[.is-open]:bg-lightBlue p-4 rounded  ${
               isActive === i ? "lightBlue-shadow" : ""
             }`}
           >
@@ -30,10 +30,10 @@ const Accordion = () => {
                   {item.title}
                 </p>
               </div>
-              <FaAngleDown className="group-[.is-open]:rotate-180 group-[.is-open]:text-black " />
+              <FaAngleDown className="group-[.is-open]:rotate-180 group-[.is-open]:text-black" />
             </div>
-            <div className="mt-2 ml-[50px] overflow-hidden max-h-0 group-[.is-open]:max-h-[100px] ">
-              <p className=" text-sm font-light leading-4 tracking-wider group-[.is-open]:text-black ">
+            <div className="mt-2 ml-[50px] overflow-hidden max-h-0 group-[.is-open]:max-h-[100px]">
+              <p className="text-base font-light leading-4 tracking-wider group-[.is-open]:text-black">
                 {item.description}
               </p>
             </div>
