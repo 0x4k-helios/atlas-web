@@ -4,7 +4,7 @@ import Accordion from "./ui/Accordion";
 
 const Features = () => {
   return (
-    <section className="relative mt-40 2xl:px-[400px] xl:px-52 lg:px-40 sm:px-24 px-8 dark-background py-16 z-50 flex lg:flex-row flex-col-reverse lg:gap-[116px] gap-16">
+    <section className="relative min-h-[610px] mt-40 2xl:px-[400px] xl:px-52 lg:px-40 sm:px-24 px-8 dark-background py-16 z-50 flex lg:flex-row flex-col-reverse lg:gap-[116px] gap-16">
       <div className="right-side flex justify-center lg:-mb-96 -mb-32 h-fit">
         <div className="w-[450px] h-[600px] blue-shadow">
           <img
