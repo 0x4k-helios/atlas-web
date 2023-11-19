@@ -3,6 +3,7 @@ import "./App.css";
 import Hero from "./components/Hero";
 import Companies from "./components/Companies";
 import Properties from "./components/Properties";
+import Features from "./components/Features";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <Companies />
       <Properties />
+      <Features />
     </>
   );
 }

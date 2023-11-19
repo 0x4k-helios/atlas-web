@@ -9,7 +9,7 @@ import "swiper/css";
 const Properties = () => {
   return (
     <>
-      <div className="mt-40 mb-40 2xl:px-[400px] xl:px-52 lg:px-40 sm:px-24 px-8 flex flex-col gap-8 relative">
+      <div className="mt-40 2xl:px-[400px] xl:px-52 lg:px-40 sm:px-24 px-8 flex flex-col gap-8 relative">
         <div>
           <span className="lg:w-[1100px] lg:h-[400px] w-[440px] h-[440px] bg-slate-300 rounded-full absolute top-48 left-96  blur-[200px]"></span>
         </div>
