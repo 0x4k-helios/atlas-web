@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Companies from "./components/Companies";
 import Properties from "./components/Properties";
 import Features from "./components/Features";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Companies />
       <Properties />
       <Features />
+      <Testimonials />
     </>
   );
 }

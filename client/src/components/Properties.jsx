@@ -2,7 +2,7 @@ import React from "react";
 import propertiesData from "../data/properties.json";
 import { FaLocationDot } from "react-icons/fa6";
 import SlideButtons from "./ui/SlideButtons";
-import { sliderSettings } from "../data/constants";
+import { propertiesSliderSettings } from "../data/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -25,7 +25,7 @@ const Properties = () => {
         </div>
 
         <div className="section-cards">
-          <Swiper {...sliderSettings}>
+          <Swiper {...propertiesSliderSettings}>
             <div className="absolute -top-[72px] right-0 z-50">
               <SlideButtons />
             </div>
