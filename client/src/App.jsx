@@ -1,24 +1,20 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Hero from "./components/Hero";
-import Companies from "./components/Companies";
-import Properties from "./components/Properties";
-import Features from "./components/Features";
-import Testimonials from "./components/Testimonials";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import { Suspense } from "react";
+import Layout from "./components/Layout";
 
 function App() {
   return (
-    <>
-      <Hero />
-      <Companies />
-      <Properties />
-      <Features />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Suspense fallback={<p>Loading...</p>}>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 

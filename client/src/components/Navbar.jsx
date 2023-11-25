@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa6";
 import { FaX } from "react-icons/fa6";
 import Button from "./ui/Button";
 import Logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,9 @@ const Navbar = () => {
   return (
     <>
       <nav className="relative flex justify-between items-center">
-        <img src={Logo} alt="Atlas Estate Logo" />
+        <Link to="/">
+          <img src={Logo} alt="Atlas Estate Logo" />
+        </Link>
 
         <div
           className="cursor-pointer md:hidden block blueGradient p-2 rounded-lg"
