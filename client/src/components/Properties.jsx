@@ -1,10 +1,10 @@
 import React from "react";
 import propertiesData from "../data/properties.json";
-import { FaLocationDot } from "react-icons/fa6";
 import SlideButtons from "./ui/SlideButtons";
 import { propertiesSliderSettings } from "../data/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import PropertyCard from "./ui/PropertyCard";
 
 const Properties = () => {
   return (
@@ -34,32 +34,7 @@ const Properties = () => {
                 key={i}
                 className="group property-card bg-[#fff] rounded-lg transition ease-out delay-150 hover:bg-orange"
               >
-                <div className="w-full h-[265px] ">
-                  <img
-                    src={property.image}
-                    alt="Property"
-                    className="rounded-t-lg w-full h-full object-cover"
-                  />
-                </div>
-
-                <div className="p-6 ">
-                  <p className="text-[32px] text-black group-hover:text-white font-medium leading-none tracking-wide mb-4 transition ease-out delay-150">
-                    <span className="text-orange group-hover:text-white transition ease-out delay-150">
-                      ${" "}
-                    </span>
-                    {property.price}
-                  </p>
-                  <p className="text-2xl text-black group-hover:text-white font-medium leading-none tracking-wide mb-[10px] transition ease-out delay-150">
-                    {property.name}
-                  </p>
-                  <p className="text-sm text-black group-hover:text-white leading-none tracking-wide transition ease-out delay-150">
-                    <FaLocationDot
-                      size={12}
-                      className="inline-block text-orange group-hover:text-white transition ease-out delay-150"
-                    />{" "}
-                    {property.address}
-                  </p>
-                </div>
+                <PropertyCard property={property} />
               </SwiperSlide>
             ))}
           </Swiper>
