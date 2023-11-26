@@ -3,7 +3,7 @@ import { FaBars } from "react-icons/fa6";
 import { FaX } from "react-icons/fa6";
 import Button from "./ui/Button";
 import Logo from "../assets/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +32,7 @@ const Navbar = () => {
 
         <div className="md:flex hidden gap-6">
           <a href="">Add Property</a>
-          <a href="">Properties</a>
+          <NavLink to="/properties">Properties</NavLink>
           <a href="">Contact</a>
         </div>
 
