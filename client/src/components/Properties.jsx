@@ -5,8 +5,29 @@ import { propertiesSliderSettings } from "../data/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import PropertyCard from "./ui/PropertyCard";
+import useProperties from "../hooks/useProperties";
+import Loader from "./ui/Loader/Loader";
 
 const Properties = () => {
+  const { data, isError, isLoading } = useProperties();
+
+  if (isError) {
+    return (
+      <div>
+        <span>Error while fetching data</span>
+      </div>
+    );
+  }
+
+  if (isLoading) {
+    return (
+      <>
+        <div className="flex justify-center items-center h-full mt-40">
+          <Loader />
+        </div>
+      </>
+    );
+  }
   return (
     <>
       <div className="mt-40 2xl:px-[400px] xl:px-52 lg:px-40 sm:px-24 px-8 flex flex-col gap-8 relative">
@@ -29,10 +50,10 @@ const Properties = () => {
             <div className="absolute -top-[72px] right-0 z-50">
               <SlideButtons />
             </div>
-            {propertiesData.map((property, i) => (
+            {data.slice(0, 6).map((property, i) => (
               <SwiperSlide
                 key={i}
-                className="group property-card bg-[#fff] rounded-lg transition ease-out delay-150 hover:bg-orange"
+                className="group bg-[#fff] rounded-lg transition ease-out delay-150 hover:bg-orange"
               >
                 <PropertyCard property={property} />
               </SwiperSlide>
