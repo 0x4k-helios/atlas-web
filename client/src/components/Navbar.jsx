@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import { FaX } from "react-icons/fa6";
 import Button from "./ui/Button";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/logo-icon-default.svg";
 import { Link, NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ textColor }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -16,11 +16,16 @@ const Navbar = () => {
     <>
       <nav className="relative flex justify-between items-center">
         <Link to="/">
-          <img src={Logo} alt="Atlas Estate Logo" />
+          <div className="flex gap-4 items-center ">
+            <img src={Logo} alt="Atlas Estate Logo" />
+            <span className={`text-xl font-medium leading-none ${textColor}`}>
+              Atlas Estate
+            </span>
+          </div>
         </Link>
 
         <div
-          className="cursor-pointer md:hidden block blueGradient p-2 rounded-lg"
+          className="cursor-pointer lg:hidden block blueGradient p-2 rounded-lg"
           onClick={toggleMenu}
         >
           {isOpen ? (
@@ -30,14 +35,20 @@ const Navbar = () => {
           )}
         </div>
 
-        <div className="md:flex hidden gap-6">
-          <a href="">Add Property</a>
-          <NavLink to="/properties">Properties</NavLink>
-          <a href="">Contact</a>
+        <div className="lg:flex hidden gap-6">
+          <a href="" className={`${textColor}`}>
+            Add Property
+          </a>
+          <NavLink to="/properties" className={`${textColor}`}>
+            Properties
+          </NavLink>
+          <a href="" className={`${textColor}`}>
+            Contact
+          </a>
         </div>
 
-        <div className="md:block hidden">
-          <a href="" className="mr-6">
+        <div className="lg:block hidden">
+          <a href="" className={`mr-6 ${textColor}`}>
             Register
           </a>
           <Button title="Login" />

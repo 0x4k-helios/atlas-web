@@ -11,8 +11,8 @@ const PropertiesPage = () => {
 
   if (isError) {
     return (
-      <div>
-        <span>Error while fetching data</span>
+      <div className="flex justify-center items-center h-full mt-40">
+        <span className="text-black">Error while fetching data</span>
       </div>
     );
   }
@@ -37,7 +37,6 @@ const PropertiesPage = () => {
         <div className="flex justify-center items-center h-full mt-40">
           <Loader />
         </div>
-        <Footer />
       </>
     );
   }

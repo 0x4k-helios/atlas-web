@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SinglePropertyPage from "./pages/SinglePropertyPage";
 
 function App() {
   const queryClient = new QueryClient();
@@ -19,7 +20,10 @@ function App() {
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
-              <Route path="/properties" element={<PropertiesPage />} />
+              <Route path="/properties">
+                <Route index element={<PropertiesPage />} />
+                <Route path=":propertyID" element={<SinglePropertyPage />} />
+              </Route>
             </Route>
           </Routes>
         </Suspense>

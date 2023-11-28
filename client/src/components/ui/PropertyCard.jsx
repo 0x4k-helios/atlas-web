@@ -1,11 +1,17 @@
 import React from "react";
 
 import { FaLocationDot } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const PropertyCard = ({ property }) => {
+  const navigate = useNavigate();
+
   return (
     <>
-      <div className=" group bg-[#fff] rounded-lg transition ease-out delay-150 hover:bg-orange">
+      <div
+        className=" group bg-[#fff] rounded-lg transition ease-out delay-150 hover:bg-orange"
+        onClick={() => navigate(`../properties/${property.id}`)}
+      >
         <div className="w-full h-[265px] ">
           <img
             src={property.image}
