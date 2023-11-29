@@ -14,6 +14,7 @@ import {
   FaLocationDot,
 } from "react-icons/fa6";
 import mapImage from "../assets/map.png";
+import Map from "../components/map/Map";
 
 const SinglePropertyPage = () => {
   let { propertyID } = useParams();
@@ -111,7 +112,13 @@ const SinglePropertyPage = () => {
                   />{" "}
                   {data?.address}, {data?.city} - {data?.country}
                 </p>
-                <img src={mapImage} alt="" />
+                <div className="map">
+                  <Map
+                    address={data?.address}
+                    city={data?.city}
+                    country={data?.country}
+                  />
+                </div>
               </div>
             </div>
           </div>
