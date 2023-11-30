@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
-import { useQuery } from "react-query";
+import { useMutation, useQuery } from "react-query";
 import { useParams } from "react-router-dom";
-import { getProperty } from "../utils/api";
+import { getProperty, removeBooking } from "../utils/api";
 import Loader from "../components/ui/Loader/Loader";
-import Button from "../components/ui/Button";
+import Btn from "../components/ui/Button";
 import {
   FaRegHeart,
   FaHeart,
@@ -15,6 +15,12 @@ import {
 } from "react-icons/fa6";
 import mapImage from "../assets/map.png";
 import Map from "../components/map/Map";
+import useAuthCheck from "../hooks/useAuthCheck";
+import { useAuth0 } from "@auth0/auth0-react";
+import BookingModal from "../components/BookingModal";
+import UserDetailsContext from "../context/UserDetailsContext";
+import { Button } from "@mantine/core";
+import { toast } from "react-toastify";
 
 const SinglePropertyPage = () => {
   let { propertyID } = useParams();
@@ -22,6 +28,29 @@ const SinglePropertyPage = () => {
   const { data, isLoading, isError } = useQuery(["property", propertyID], () =>
     getProperty(propertyID)
   );
+
+  const [modalOpened, setModalOpened] = useState(false);
+  const { validateLogin } = useAuthCheck();
+  const { user } = useAuth0();
+
+  const {
+    userDetails: { token, bookings },
+    setUserDetails,
+  } = useContext(UserDetailsContext);
+
+  const { mutate: cancelBooking, isLoading: cancelling } = useMutation({
+    mutationFn: () => removeBooking(propertyID, user?.email, token),
+    onSuccess: () => {
+      setUserDetails((prev) => ({
+        ...prev,
+        bookings: prev.bookings.filter((booking) => booking?.id !== propertyID),
+      }));
+
+      toast.success("Booking visit has been cancelled", {
+        position: "bottom-right",
+      });
+    },
+  });
 
   if (isError) {
     return (
@@ -66,10 +95,46 @@ const SinglePropertyPage = () => {
           </div>
           <div className="property-details flex lg:flex-row flex-col gap-8">
             <div className="left-side flex-1 flex flex-col gap-8">
-              <div className="flex items-center gap-8 bg-[#fff] p-8 rounded-lg">
-                <Button title="Book a visit" style="w-full" />
-                <FaRegHeart size={25} className="text-gray-400" />
+              <div className="flex items-start gap-8 bg-[#fff] p-8 rounded-lg">
+                {bookings?.map((booking) => booking.id).includes(propertyID) ? (
+                  <div>
+                    <Button
+                      variant="light"
+                      w={"100%"}
+                      color="red"
+                      mb={"8px"}
+                      onClick={() => cancelBooking()}
+                      disabled={cancelling}
+                    >
+                      Cancel Visit
+                    </Button>
+                    <span className="w-full font-light text-gray-600">
+                      You have already booked a visit for date{" "}
+                      {
+                        bookings?.filter(
+                          (booking) => booking?.id === propertyID
+                        )[0].date
+                      }
+                    </span>
+                  </div>
+                ) : (
+                  <Btn
+                    title="Book a visit"
+                    style="w-full"
+                    onClick={() => {
+                      validateLogin() && setModalOpened(true);
+                    }}
+                  />
+                )}
+
+                <FaRegHeart size={25} className="text-gray-400 my-2" />
               </div>
+              <BookingModal
+                opened={modalOpened}
+                setOpened={setModalOpened}
+                propertyID={propertyID}
+                email={user?.email}
+              />
               <div className="overview-box bg-[#fff] p-8 rounded-lg">
                 <p className="text-2xl">Overview</p>
                 <div className="flex justify-between mt-8">
