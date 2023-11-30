@@ -4,6 +4,8 @@ import { FaX } from "react-icons/fa6";
 import Button from "./ui/Button";
 import Logo from "../assets/logo-icon-default.svg";
 import { Link, NavLink } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
+import ProfileMenu from "./ProfileMenu";
 
 const Navbar = ({ textColor }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +13,8 @@ const Navbar = ({ textColor }) => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
 
   return (
     <>
@@ -48,10 +52,16 @@ const Navbar = ({ textColor }) => {
         </div>
 
         <div className="lg:block hidden">
-          <a href="" className={`mr-6 ${textColor}`}>
-            Register
-          </a>
-          <Button title="Login" />
+          {isAuthenticated ? (
+            <ProfileMenu user={user} logout={logout} />
+          ) : (
+            <div>
+              <a href="" className={`mr-6 ${textColor}`}>
+                Register
+              </a>
+              <Button title="Login" onClick={loginWithRedirect} />
+            </div>
+          )}
         </div>
 
         <div
@@ -71,12 +81,18 @@ const Navbar = ({ textColor }) => {
             </a>
           </div>
           <hr className="my-5" />
-          <div className="flex flex-col items-center gap-5">
-            <a href="" className="text-black">
-              Register
-            </a>
-            <Button title="Login" />
-          </div>
+          {isAuthenticated ? (
+            <div className="flex justify-center">
+              <ProfileMenu user={user} logout={logout} />
+            </div>
+          ) : (
+            <div className="flex flex-col items-center gap-5">
+              <a href="" className={` text-black`}>
+                Register
+              </a>
+              <Button title="Login" onClick={loginWithRedirect} />
+            </div>
+          )}
         </div>
       </nav>
     </>
