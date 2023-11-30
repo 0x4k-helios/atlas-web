@@ -9,9 +9,7 @@ const useAuthCheck = () => {
     if (!isAuthenticated) {
       toast.error("You must be logged in", { position: "bottom-right" });
       return false;
-    } else {
-      return true;
-    }
+    } else return true;
   };
   return {
     validateLogin,
