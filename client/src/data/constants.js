@@ -77,6 +77,20 @@ export const testimonialsSliderSettings = {
   },
 };
 
+//To update Favorites List
+export const updateFavorites = (id, favorites) => {
+  if (favorites.includes(id)) {
+    return favorites.filter((propertyID) => propertyID !== id);
+  } else {
+    return [...favorites, id];
+  }
+};
+
+//To Check Favorite
+export const checkFavorites = (id, favorites) => {
+  return favorites?.includes(id) ? true : false;
+};
+
 //Testimonials Data
 export const testimonialsData = [
   {

@@ -21,6 +21,7 @@ import BookingModal from "../components/BookingModal";
 import UserDetailsContext from "../context/UserDetailsContext";
 import { Button } from "@mantine/core";
 import { toast } from "react-toastify";
+import Heart from "../components/ui/Heart";
 
 const SinglePropertyPage = () => {
   let { propertyID } = useParams();
@@ -127,7 +128,7 @@ const SinglePropertyPage = () => {
                   />
                 )}
 
-                <FaRegHeart size={25} className="text-gray-400 my-2" />
+                <Heart id={propertyID} />
               </div>
               <BookingModal
                 opened={modalOpened}
