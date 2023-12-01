@@ -64,7 +64,7 @@
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--white) !important;
   position: relative;
   min-height: 100vh;
 }
