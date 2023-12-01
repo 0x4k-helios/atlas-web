@@ -11,7 +11,7 @@ const Footer = () => {
           homes for sale and properties near you.
         </p>
       </div>
-      <div className="flex flex-col gap-6 sm:text-left text-center">
+      <div className="flex flex-col gap-6 sm:text-left text-center text-white">
         <a href="">Add Property</a>
         <a href="">Properties</a>
         <a href="">Contact</a>
