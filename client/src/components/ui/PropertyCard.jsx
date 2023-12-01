@@ -2,6 +2,7 @@ import React from "react";
 
 import { FaLocationDot } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import Heart from "./Heart";
 
 const PropertyCard = ({ property }) => {
   const navigate = useNavigate();
@@ -12,7 +13,11 @@ const PropertyCard = ({ property }) => {
         className=" group bg-[#fff] rounded-lg transition ease-out delay-150 hover:bg-orange"
         onClick={() => navigate(`../properties/${property.id}`)}
       >
-        <div className="w-full h-[265px] ">
+        <div className="relative w-full h-[265px]">
+          <div className="absolute right-0 top-0">
+            <Heart id={property.id} color="white" />
+          </div>
+
           <img
             src={property.image}
             alt="Property"
