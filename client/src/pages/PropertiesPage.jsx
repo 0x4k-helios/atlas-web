@@ -5,9 +5,22 @@ import useProperties from "../hooks/useProperties";
 import Loader from "../components/ui/Loader/Loader";
 import Footer from "../components/Footer";
 import PropertyCard from "../components/ui/PropertyCard";
+import { useLocation } from "react-router-dom";
 
 const PropertiesPage = () => {
   const { data, isError, isLoading } = useProperties();
+
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const searchItem = searchParams.get("search");
+
+  let filteredProperties = data;
+
+  if (searchItem) {
+    filteredProperties = data?.filter((property) =>
+      property.title.toLowerCase().includes(searchItem.toLowerCase())
+    );
+  }
 
   if (isError) {
     return (
@@ -58,7 +71,7 @@ const PropertiesPage = () => {
         </div>
       </section>
       <div className="mt-40 2xl:px-[400px] xl:px-52 lg:px-40 sm:px-24 px-8 grid grid-cols-3 grid-rows-1 gap-14 relative">
-        {data.map((property, i) => (
+        {filteredProperties.map((property, i) => (
           <div className="property-card transition ease-out delay-150">
             <PropertyCard property={property} key={i} />
           </div>
