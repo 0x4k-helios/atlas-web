@@ -91,6 +91,13 @@ export const checkFavorites = (id, favorites) => {
   return favorites?.includes(id) ? true : false;
 };
 
+//To Check the length of input
+export const validateString = (value) => {
+  return value?.length < 3 || value === null
+    ? "Must have at least 3 characters"
+    : null;
+};
+
 //Testimonials Data
 export const testimonialsData = [
   {
