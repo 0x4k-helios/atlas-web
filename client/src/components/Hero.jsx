@@ -6,7 +6,7 @@ import heroImage from "../assets/hero-image.jpg";
 const Hero = () => {
   return (
     <section className="2xl:px-[400px] xl:px-52 lg:px-40 sm:px-24 px-8 dark-background py-16">
-      <Navbar />
+      <Navbar textColor="text-white" />
       <div className="hero-content flex md:flex-row flex-col items-center justify-between lg:gap-28 gap-12 mt-20 relative">
         <div className="text-white flex flex-col gap-10 xl:w-[480px] md:w-[440px] sm:w-full z-30">
           <div>

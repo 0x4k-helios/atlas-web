@@ -21,7 +21,7 @@ const PropertiesPage = () => {
     return (
       <>
         <section className="2xl:px-[400px] xl:px-52 lg:px-40 sm:px-24 px-8 dark-background py-16">
-          <Navbar />
+          <Navbar textColor="text-white" />
           <div className="section-heading flex flex-col items-center mt-20">
             <div className="text-center">
               <p className="orange-gradient inline-block text-transparent bg-clip-text text-2xl">
@@ -44,7 +44,7 @@ const PropertiesPage = () => {
   return (
     <>
       <section className="2xl:px-[400px] xl:px-52 lg:px-40 sm:px-24 px-8 dark-background py-16">
-        <Navbar />
+        <Navbar textColor="text-white" />
         <div className="section-heading flex flex-col items-center mt-20">
           <div className="text-center">
             <p className="orange-gradient inline-block text-transparent bg-clip-text text-2xl">

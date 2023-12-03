@@ -6,12 +6,22 @@ import Logo from "../assets/logo-icon-default.svg";
 import { Link, NavLink } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import ProfileMenu from "./ProfileMenu";
+import AddPropertyModal from "./AddPropertyModal";
+import useAuthCheck from "../hooks/useAuthCheck";
 
 const Navbar = ({ textColor }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const { validateLogin } = useAuthCheck();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleAddPropertyModal = () => {
+    if (validateLogin()) {
+      setModalOpen(true);
+    }
   };
 
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
@@ -40,16 +50,22 @@ const Navbar = ({ textColor }) => {
         </div>
 
         <div className="lg:flex hidden gap-6">
-          <a href="" className={`${textColor}`}>
+          <div
+            onClick={handleAddPropertyModal}
+            href=""
+            className={`navbar-link cursor-pointer ${textColor}`}
+          >
             Add Property
-          </a>
-          <NavLink to="/properties" className={`${textColor}`}>
+          </div>
+          <NavLink to="/properties" className={`navbar-link ${textColor}`}>
             Properties
           </NavLink>
-          <a href="" className={`${textColor}`}>
+          <a href="" className={`navbar-link ${textColor}`}>
             Contact
           </a>
         </div>
+
+        <AddPropertyModal open={modalOpen} setOpen={setModalOpen} />
 
         <div className="lg:block hidden">
           {isAuthenticated ? (

@@ -84,8 +84,8 @@ h1 {
   letter-spacing: 0.64px;
 }
 
-nav a {
-  color: white;
+nav a,
+.navbar-link {
   line-height: normal;
 }
 
@@ -198,4 +198,18 @@ nav a {
 
 .mantine-DatePicker-levelsGroup {
   justify-content: center;
+}
+
+.mantine-InputWrapper-root {
+  text-align: left;
+}
+
+.mantine-InputWrapper-label {
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+}
+
+.mantine-Fieldset-legend {
+  color: var(--black);
+  font-weight: 400;
 }
