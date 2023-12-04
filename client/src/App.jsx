@@ -12,6 +12,7 @@ import SinglePropertyPage from "./pages/SinglePropertyPage";
 import UserDetailsContext from "./context/UserDetailsContext";
 import BookingsPage from "./pages/BookingsPage";
 import FavoritesPage from "./pages/FavoritesPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ function App() {
                 </Route>
                 <Route path="/bookings" element={<BookingsPage />} />
                 <Route path="/favorites" element={<FavoritesPage />} />
+                <Route path="/contact" element={<ContactPage />} />
               </Route>
             </Routes>
           </Suspense>

@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import SearchBar from "../components/ui/SearchBar";
 import useProperties from "../hooks/useProperties";
 import Loader from "../components/ui/Loader/Loader";
-import Footer from "../components/Footer";
 import PropertyCard from "../components/ui/PropertyCard";
 import { useLocation } from "react-router-dom";
 
