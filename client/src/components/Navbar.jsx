@@ -60,9 +60,9 @@ const Navbar = ({ textColor }) => {
           <NavLink to="/properties" className={`navbar-link ${textColor}`}>
             Properties
           </NavLink>
-          <a href="" className={`navbar-link ${textColor}`}>
+          <NavLink to="/contact" className={`navbar-link ${textColor}`}>
             Contact
-          </a>
+          </NavLink>
         </div>
 
         <AddPropertyModal open={modalOpen} setOpen={setModalOpen} />

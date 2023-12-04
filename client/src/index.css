@@ -219,3 +219,10 @@ nav a,
   color: var(--black);
   font-weight: 400;
 }
+
+.contact-form {
+  background-color: var(--mantine-color-white);
+  padding: var(--mantine-spacing-xl);
+  border-radius: var(--mantine-radius-md);
+  box-shadow: var(--mantine-shadow-lg);
+}
