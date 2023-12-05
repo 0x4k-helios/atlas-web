@@ -76,7 +76,7 @@ const FavoritesPage = () => {
           </div>
         </div>
       </section>
-      <div className="mt-40 2xl:px-[400px] xl:px-52 lg:px-40 sm:px-24 px-8 grid grid-cols-3 grid-rows-1 gap-14 relative">
+      <div className="mt-40 2xl:px-[400px] xl:px-52 lg:px-40 sm:px-24 px-8 grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 grid-rows-1 gap-14 relative">
         {data
           .filter((property) => favorites.includes(property.id))
           .map((property, i) => (
