@@ -14,7 +14,7 @@ const Contact = () => {
             Find Your Perfect Property
           </h2>
           <div>
-            <Button title="Contact Us" />
+            <Button title="Contact Us" to="/contact" />
           </div>
         </div>
       </div>
