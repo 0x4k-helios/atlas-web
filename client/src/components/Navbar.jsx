@@ -37,22 +37,31 @@ const Navbar = ({ textColor }) => {
             </span>
           </div>
         </Link>
-
-        <div
-          className="cursor-pointer lg:hidden block blueGradient p-2 rounded-lg"
-          onClick={toggleMenu}
-        >
-          {isOpen ? (
-            <FaX size={20} className="text-white" />
-          ) : (
-            <FaBars size={20} className="text-white" />
-          )}
+        <div className="lg:hidden flex gap-4 items-center">
+          <div className="">
+            {isAuthenticated ? (
+              <ProfileMenu user={user} logout={logout} />
+            ) : (
+              <div>
+                <Button title="Login" onClick={loginWithRedirect} />
+              </div>
+            )}
+          </div>
+          <div
+            className="cursor-pointer lg:hidden block blueGradient p-2 rounded-lg h-fit"
+            onClick={toggleMenu}
+          >
+            {isOpen ? (
+              <FaX size={20} className="text-white" />
+            ) : (
+              <FaBars size={20} className="text-white" />
+            )}
+          </div>
         </div>
 
         <div className="lg:flex hidden gap-6">
           <div
             onClick={handleAddPropertyModal}
-            href=""
             className={`navbar-link cursor-pointer ${textColor}`}
           >
             Add Property
@@ -67,45 +76,28 @@ const Navbar = ({ textColor }) => {
 
         <AddPropertyModal open={modalOpen} setOpen={setModalOpen} />
 
-        <div className="lg:block hidden">
-          {isAuthenticated ? (
-            <ProfileMenu user={user} logout={logout} />
-          ) : (
-            <div>
-              <a href="" className={`mr-6 ${textColor}`}>
-                Register
-              </a>
-              <Button title="Login" onClick={loginWithRedirect} />
-            </div>
-          )}
-        </div>
-
         <div
           className={`absolute right-0 top-10 w-40 bg-white p-4 rounded-lg blue-shadow z-50 ${
             isOpen ? "block" : "hidden"
           } `}
         >
           <div className="flex flex-col items-center gap-5">
-            <a href="" className="text-black">
+            <a onClick={handleAddPropertyModal} className="text-black">
               Add Property
             </a>
-            <a href="" className="text-black">
+            <NavLink to="/properties" href="" className="text-black">
               Properties
-            </a>
-            <a href="" className="text-black">
+            </NavLink>
+            <NavLink to="/contact" className="text-black">
               Contact
-            </a>
+            </NavLink>
           </div>
-          <hr className="my-5" />
+        </div>
+        <div className="lg:block hidden">
           {isAuthenticated ? (
-            <div className="flex justify-center">
-              <ProfileMenu user={user} logout={logout} />
-            </div>
+            <ProfileMenu user={user} logout={logout} />
           ) : (
-            <div className="flex flex-col items-center gap-5">
-              <a href="" className={` text-black`}>
-                Register
-              </a>
+            <div>
               <Button title="Login" onClick={loginWithRedirect} />
             </div>
           )}
