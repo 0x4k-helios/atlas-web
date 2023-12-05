@@ -21,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       clientId={AUTH_CLIENT_ID}
       authorizationParams={{ redirect_uri: REDIRECT_URI }}
       audience={AUTH_AUDIENCE}
+      cacheLocation="localstorage"
       scope="openid profile email"
     >
       <MantineProvider>
