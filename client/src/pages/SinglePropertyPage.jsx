@@ -87,7 +87,7 @@ const SinglePropertyPage = () => {
               {data?.price}
             </p>
           </div>
-          <div className="property-image w-full h-[630px] overflow-hidden rounded-lg">
+          <div className="property-image w-full md:h-[630px] h-96 overflow-hidden rounded-lg">
             <img
               src={data?.image}
               alt={data?.title}
@@ -138,7 +138,7 @@ const SinglePropertyPage = () => {
               />
               <div className="overview-box bg-[#fff] p-8 rounded-lg">
                 <p className="text-2xl">Overview</p>
-                <div className="flex justify-between mt-8">
+                <div className="flex justify-between gap-6 mt-8 flex-wrap">
                   <div className="flex items-center gap-3">
                     <span className="p-3 bg-lightBlue text-blue rounded">
                       <FaDoorClosed size={25} />
