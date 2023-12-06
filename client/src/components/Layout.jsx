@@ -6,7 +6,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import UserDetailsContext from "../context/UserDetailsContext";
 import { useMutation } from "react-query";
 import { createUser } from "../utils/api";
-import { AUTH_AUDIENCE } from "../../config/config";
+// import { AUTH_AUDIENCE } from "../../config/config";
 import useFavorites from "../hooks/useFavorites";
 import useBookings from "../hooks/useBookings";
 
@@ -26,7 +26,7 @@ const Layout = () => {
     const getTokenAndRegister = async () => {
       const res = await getAccessTokenWithPopup({
         authorizationParams: {
-          audience: AUTH_AUDIENCE,
+          audience: process.env.AUTH_AUDIENCE,
           scope: "openid profile email",
         },
       });
