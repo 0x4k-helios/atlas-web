@@ -26,13 +26,13 @@ https://www.youtube.com/watch?v=vY-PFCWfwwk
 ## Some pages
 
 - **Home Page**
-- 
+  
 ![Home-Page](https://github.com/hamza-ouaddi/atlas-estate-website/assets/80076862/23c0ffca-21ec-43a7-b675-e1c52c34a2e8)
 
 - **Properties Page**
-- 
+ 
 ![Properties-Page](https://github.com/hamza-ouaddi/atlas-estate-website/assets/80076862/61adccc5-e85a-423c-8a3f-3566af8cabe6)
 
 - **Single Property Page**
-- 
+  
 ![Property-Page](https://github.com/hamza-ouaddi/atlas-estate-website/assets/80076862/d6e4c8b9-1544-4ee2-ba65-1ff0c52ccf05)
