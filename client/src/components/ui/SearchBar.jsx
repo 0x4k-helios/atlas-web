@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import { FaMagnifyingGlass } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
-  const iconStyle = {
-    backgroundClip: "text",
-    color: "transparent",
-    backgroundImage: "linear-gradient(135deg, #6b73ff 0%, #000dff 100%)",
+  const [searchItem, setSearchItem] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    navigate(`/properties?search=${searchItem}`);
   };
 
   return (
@@ -16,10 +18,17 @@ const SearchBar = () => {
         <input
           type="text"
           placeholder="Search for Properties..."
-          className="ml-5 w-full"
+          className="searchbar-input ml-5 w-full"
+          value={searchItem}
+          onChange={(e) => setSearchItem(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSearch();
+            }
+          }}
         />
       </div>
-      <Button title="Search" className="ml-28" />
+      <Button title="Search" className="ml-28" onClick={handleSearch} />
     </div>
   );
 };

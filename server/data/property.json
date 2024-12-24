@@ -1,0 +1,281 @@
+[
+  {
+    "_id": { "$oid": "64392d39dfd90fb29e464fb7" },
+    "title": "Modern Condo",
+    "description": "Contemporary condo with sleek design",
+    "price": 600000,
+    "address": "City Center",
+    "city": "Metropolis",
+    "country": "USA",
+    "image": "https://images.unsplash.com/photo-1580041065738-e72023775cdc",
+    "facilities": {
+      "beds": 2,
+      "bathrooms": 2,
+      "parking": 1,
+      "swimmingpool": 1
+    },
+    "userEmail": "john@example.com",
+    "createdAt": { "$date": "2023-11-25T08:15:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T08:15:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "64392e0bdfd90fb29e464fbc" },
+    "title": "Cozy Cottage",
+    "description": "Charming cottage with a fireplace",
+    "price": 400000,
+    "address": "Meadow Lane",
+    "city": "Tranquil Village",
+    "country": "USA",
+    "image": "https://images.unsplash.com/photo-1623625433656-76f7e1450acb",
+    "facilities": {
+      "beds": 2,
+      "bathrooms": 1,
+      "parking": 2,
+      "swimmingpool": 0
+    },
+    "userEmail": "emma@example.com",
+    "createdAt": { "$date": "2023-11-25T09:30:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T09:30:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "6439001c74446601d6fce96d" },
+    "title": "Mountain Retreat",
+    "description": "Secluded retreat with mountain views",
+    "price": 550000,
+    "address": "Mountain Ridge",
+    "city": "Alpine Village",
+    "country": "Canada",
+    "image": "https://images.unsplash.com/photo-1630404356140-3825a5f74992",
+    "facilities": {
+      "beds": 3,
+      "bathrooms": 2,
+      "parking": 2,
+      "swimmingpool": 0
+    },
+    "userEmail": "david@example.com",
+    "createdAt": { "$date": "2023-11-25T10:45:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T10:45:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "64392e1edfd90fb29e464fbd" },
+    "title": "Beachfront Paradise",
+    "description": "Luxurious beachfront property with private access",
+    "price": 900000,
+    "address": "Seaside Drive",
+    "city": "Tropical Haven",
+    "country": "Maldives",
+    "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2",
+    "facilities": {
+      "beds": 5,
+      "bathrooms": 4,
+      "parking": 3,
+      "swimmingpool": 1
+    },
+    "userEmail": "olivia@example.com",
+    "createdAt": { "$date": "2023-11-25T12:00:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T12:00:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "64392d67dfd90fb29e464fb8" },
+    "title": "Rural Retreat",
+    "description": "Serene farmhouse in the countryside",
+    "price": 320000,
+    "address": "Meadow Lane",
+    "city": "Serene Village",
+    "country": "UK",
+    "image": "https://images.unsplash.com/photo-1670648472060-36b4b42b23a6",
+    "facilities": {
+      "beds": 3,
+      "bathrooms": 2,
+      "parking": 4,
+      "swimmingpool": 0
+    },
+    "userEmail": "charlie@example.com",
+    "createdAt": { "$date": "2023-11-25T13:15:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T13:15:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "64392df2dfd90fb29e464fbb" },
+    "title": "Cityscape Condo",
+    "description": "Modern condo with stunning city views",
+    "price": 700000,
+    "address": "Skyline Avenue",
+    "city": "Metro City",
+    "country": "USA",
+    "image": "https://images.unsplash.com/photo-1602082550187-3f954840a0f7",
+    "facilities": {
+      "beds": 2,
+      "bathrooms": 2,
+      "parking": 1,
+      "swimmingpool": 1
+    },
+    "userEmail": "ava@example.com",
+    "createdAt": { "$date": "2023-11-25T14:30:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T14:30:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "64392e32dfd90fb29e464fbe" },
+    "title": "Historic Mansion",
+    "description": "Grand mansion with rich historical significance",
+    "price": 1200000,
+    "address": "Heritage Lane",
+    "city": "Historical Town",
+    "country": "France",
+    "image": "https://images.unsplash.com/photo-1595222016771-1843541fa718",
+    "facilities": {
+      "beds": 6,
+      "bathrooms": 5,
+      "parking": 3,
+      "swimmingpool": 1
+    },
+    "userEmail": "james@example.com",
+    "createdAt": { "$date": "2023-11-25T15:45:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T15:45:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "64392e46dfd90fb29e464fbf" },
+    "title": "Sunny Villa",
+    "description": "Spacious villa with plenty of natural light",
+    "price": 550000,
+    "address": "Sunset Street",
+    "city": "Sunshine City",
+    "country": "USA",
+    "image": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf",
+    "facilities": {
+      "beds": 4,
+      "bathrooms": 3,
+      "parking": 2,
+      "swimmingpool": 1
+    },
+    "userEmail": "john@example.com",
+    "createdAt": { "$date": "2023-11-25T17:00:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T17:00:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "64392e57dfd90fb29e464fc0" },
+    "title": "Sky High Penthouse",
+    "description": "Elegant penthouse with panoramic city skyline views",
+    "price": 850000,
+    "address": "Highrise Avenue",
+    "city": "Skyline City",
+    "country": "USA",
+    "image": "https://images.unsplash.com/photo-1542928658-22251e208ac1",
+    "facilities": {
+      "beds": 3,
+      "bathrooms": 3,
+      "parking": 2,
+      "swimmingpool": 1
+    },
+    "userEmail": "ethan@example.com",
+    "createdAt": { "$date": "2023-11-25T18:15:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T18:15:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "64392e69dfd90fb29e464fc1" },
+    "title": "Countryside Estate",
+    "description": "Sprawling estate in a picturesque countryside",
+    "price": 1500000,
+    "address": "Country Road",
+    "city": "Rural Retreat",
+    "country": "UK",
+    "image": "https://images.unsplash.com/photo-1632152683081-28923830268d",
+    "facilities": {
+      "beds": 8,
+      "bathrooms": 6,
+      "parking": 4,
+      "swimmingpool": 1
+    },
+    "userEmail": "mia@example.com",
+    "createdAt": { "$date": "2023-11-25T19:30:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T19:30:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "643a30b60c4348510952923a" },
+    "title": "Modern Townhouse",
+    "description": "Sleek and modern townhouse in a trendy neighborhood",
+    "price": 500000,
+    "address": "Trendy Street",
+    "city": "Hip City",
+    "country": "USA",
+    "image": "https://images.unsplash.com/photo-1577593980495-6e7f66a54ee6",
+    "facilities": {
+      "beds": 3,
+      "bathrooms": 2,
+      "parking": 1,
+      "swimmingpool": 0
+    },
+    "userEmail": "noah@example.com",
+    "createdAt": { "$date": "2023-11-25T20:45:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T20:45:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "643900fa74446601d6fce96e" },
+    "title": "Secluded Cabin",
+    "description": "Private cabin nestled in the woods for a peaceful getaway",
+    "price": 400000,
+    "address": "Woodland Retreat",
+    "city": "Tranquil Haven",
+    "country": "Canada",
+    "image": "https://images.unsplash.com/photo-1588557132645-ff567110cafd",
+    "facilities": {
+      "beds": 2,
+      "bathrooms": 1,
+      "parking": 2,
+      "swimmingpool": 0
+    },
+    "userEmail": "oliver@example.com",
+    "createdAt": { "$date": "2023-11-25T22:00:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T22:00:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "6439011d74446601d6fce96f" },
+    "title": "Ocean View Penthouse",
+    "description": "Luxurious penthouse with breathtaking ocean views",
+    "price": 1200000,
+    "address": "Oceanfront Boulevard",
+    "city": "Seaside City",
+    "country": "USA",
+    "image": "https://images.unsplash.com/photo-1600671012016-e5890d87f804",
+    "facilities": {
+      "beds": 4,
+      "bathrooms": 3,
+      "parking": 2,
+      "swimmingpool": 1
+    },
+    "userEmail": "olivia@example.com",
+    "createdAt": { "$date": "2023-11-25T23:15:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-25T23:15:00.000+00:00" }
+  },
+
+  {
+    "_id": { "$oid": "64392ddddfd90fb29e464fba" },
+    "title": "Downtown Apartment",
+    "description": "Modern apartment in the heart of the city",
+    "price": 1200000,
+    "address": "Main Street",
+    "city": "Metropolis",
+    "country": "USA",
+    "image": "https://images.unsplash.com/photo-1515263487990-61b07816b324",
+    "facilities": {
+      "beds": 3,
+      "bathrooms": 2,
+      "parking": 1,
+      "swimmingpool": 0
+    },
+    "userEmail": "sophia@example.com",
+    "createdAt": { "$date": "2023-11-26T08:00:00.000+00:00" },
+    "updatedAt": { "$date": "2023-11-26T08:00:00.000+00:00" }
+  }
+]
